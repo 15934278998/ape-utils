@@ -47,7 +47,7 @@ public class SnowFlakeUtil {
      * 产生下一个ID
      * @param datacenterId 数据中心标识
      * @param machineId 机器标识
-     * @return
+     * @return ID
      */
     public static synchronized long nextId(long datacenterId,long machineId) {
         if (machineId > MAX_MACHINE || machineId < 0) {

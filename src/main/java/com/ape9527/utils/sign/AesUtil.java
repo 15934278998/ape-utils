@@ -35,7 +35,7 @@ public class AesUtil {
      *
      * @param encrypt 待解密字符串
      * @return 解密后的字符串
-     * @throws Exception
+     * @throws Exception Exception
      */
     public static String decryptByDefaultKey(String encrypt) throws Exception {
         if(StringUtil.isEmpty(DEFAULT_KEY)){
@@ -49,7 +49,7 @@ public class AesUtil {
      *
      * @param content 待加密字符串
      * @return 加密后的字符串
-     * @throws Exception
+     * @throws Exception Exception
      */
     public static String encryptByDefaultKey(String content) throws Exception {
         if(StringUtil.isEmpty(DEFAULT_KEY)){
@@ -73,7 +73,7 @@ public class AesUtil {
      *
      * @param base64Code 待解码的base 64 code
      * @return 解码后的byte[]
-     * @throws Exception
+     * @throws Exception Exception
      */
     private static byte[] base64Decode(String base64Code) throws Exception {
         return StringUtils.isEmpty(base64Code) ? null : Base64.getDecoder().decode(base64Code);
@@ -85,7 +85,7 @@ public class AesUtil {
      * @param content    待加密的内容
      * @param encryptKey 加密密钥
      * @return 加密后的byte[]
-     * @throws Exception
+     * @throws Exception Exception
      */
     private static byte[] aesEncryptToBytes(String content, String encryptKey) throws Exception {
         KeyGenerator kgen = KeyGenerator.getInstance("AES");
@@ -102,7 +102,7 @@ public class AesUtil {
      * @param content    待加密的内容
      * @param encryptKey 加密密钥
      * @return 加密后的base 64 code
-     * @throws Exception
+     * @throws Exception Exception
      */
     public static String encrypt(String content, String encryptKey) throws Exception {
         return base64Encode(aesEncryptToBytes(content, encryptKey));
@@ -114,7 +114,7 @@ public class AesUtil {
      * @param encryptStr 待解密的base 64 code
      * @param decryptKey 解密密钥
      * @return 解密后的string
-     * @throws Exception
+     * @throws Exception Exception
      */
     public static String decrypt(String encryptStr, String decryptKey) throws Exception {
         return StringUtils.isEmpty(encryptStr) ? null : aesDecryptByBytes(base64Decode(encryptStr), decryptKey);

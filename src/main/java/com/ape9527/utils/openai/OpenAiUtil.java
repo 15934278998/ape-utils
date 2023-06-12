@@ -45,8 +45,8 @@ public class OpenAiUtil {
     /**
      * Creates a completion for the chat message
      *
-     * @param messages
-     * @return
+     * @param messages messages
+     * @return ChatResponse
      */
     public static ChatResponse createChatCompletion(List<ChatMessage> messages) {
         ChatRequest request = new ChatRequest(messages);
@@ -56,8 +56,8 @@ public class OpenAiUtil {
     /**
      * Creates a completion for the ChatRequest
      *
-     * @param request
-     * @return
+     * @param request request
+     * @return ChatResponse
      */
     public static ChatResponse createChatCompletion(ChatRequest request) {
         if (StringUtil.isEmpty(request.getModel())) {
@@ -76,8 +76,8 @@ public class OpenAiUtil {
     /**
      * Creates an image given a prompt.
      *
-     * @param prompt
-     * @return
+     * @param prompt prompt
+     * @return ImageResponse
      */
     public static ImageResponse createImage(String prompt) {
         ImageRequest request = new ImageRequest(prompt);
@@ -87,8 +87,8 @@ public class OpenAiUtil {
     /**
      * Creates an image given a ImageRequest.
      *
-     * @param request
-     * @return
+     * @param request request
+     * @return ImageResponse
      */
     public static ImageResponse createImage(ImageRequest request) {
         String response = HttpsUtil.sendSslPost(

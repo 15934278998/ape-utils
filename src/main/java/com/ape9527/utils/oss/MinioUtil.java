@@ -149,6 +149,7 @@ public class MinioUtil {
     /**
      * 删除文件
      *
+     * @param objectName 文件名称
      * @return true or false
      */
     public static Boolean delete(String objectName) {

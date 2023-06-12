@@ -22,6 +22,7 @@ public class SendMailUtil {
     /**
      * 发送普通邮件
      *
+     * @param sender 发送人信息
      * @param receiver 接收人及发送信息
      * @return true or false
      */
