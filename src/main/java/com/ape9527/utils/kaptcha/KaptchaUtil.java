@@ -14,6 +14,8 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
+ * 图片验证码工具类
+ *
  * @author YuanShuai[apeblog@163.com]
  */
 public class KaptchaUtil {
@@ -60,7 +62,7 @@ public class KaptchaUtil {
 
     private static final DefaultKaptcha DEFAULT_KAPTCHA = new DefaultKaptcha();
 
-    public static void setConfig(){
+    private static void setConfig() {
         Properties properties = new Properties();
         properties.setProperty("kaptcha.border", BORDER ? "yes" : "no");
         properties.setProperty("kaptcha.border.color", BORDER_COLOR);
@@ -75,6 +77,12 @@ public class KaptchaUtil {
         DEFAULT_KAPTCHA.setConfig(config);
     }
 
+    /**
+     * 获取图片验证码
+     *
+     * @return 验证码文本信息和图片信息
+     * @throws IOException IOException
+     */
     public static Map<String, String> getImageCode() throws IOException {
         setConfig();
         // 生成文字验证码

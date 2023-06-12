@@ -25,6 +25,11 @@ public class AddressUtil {
      */
     public static final String UNKNOWN = "XX XX";
 
+    /**
+     *  根据IP解析地址地理位置
+     * @param ip ip地址
+     * @return 地理位置
+     */
     public static String getRealAddressByIP(String ip)
     {
         String address = UNKNOWN;

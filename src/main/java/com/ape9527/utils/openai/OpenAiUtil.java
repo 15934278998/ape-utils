@@ -11,6 +11,8 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
+ * OpenAI工具类
+ *
  * @author YuanShuai[apeblog@163.com]
  */
 public class OpenAiUtil {

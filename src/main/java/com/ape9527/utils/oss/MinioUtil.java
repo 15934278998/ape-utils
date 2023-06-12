@@ -140,7 +140,7 @@ public class MinioUtil {
      * @throws InvalidEndpointException 异常
      */
     public static MinioClient getClient() throws InvalidPortException, InvalidEndpointException {
-        if(minioClient == null){
+        if (minioClient == null) {
             minioClient = new MinioClient(HOST, ACCESS_KEY, SECRET_KEY);
         }
         return minioClient;

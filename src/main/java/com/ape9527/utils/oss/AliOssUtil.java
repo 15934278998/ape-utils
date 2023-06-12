@@ -18,20 +18,29 @@ import java.io.InputStream;
 @Component
 public class AliOssUtil {
 
-    /** accessKeyId */
+    /**
+     * accessKeyId
+     */
     private String keyId;
 
-    /** accessKeySecret */
+    /**
+     * accessKeySecret
+     */
     private String keySecret;
 
-    /** bucket名称 */
+    /**
+     * bucket名称
+     */
     private String bucketName;
 
-    /** 地域节点 */
+    /**
+     * 地域节点
+     */
     private String endpoint;
 
     /**
      * 上传文件到阿里云oss
+     *
      * @param file 要上传的文件
      * @return 上传后的地址
      */
@@ -46,7 +55,7 @@ public class AliOssUtil {
             String fileName = StringUtil.fileNameAddTimestamp(file.getOriginalFilename());
             oss.putObject(bucketName, fileName, inputStream);
             cleanConnection(oss);
-            res = "https://" + bucketName+ "." + endpoint + "/" + fileName;
+            res = "https://" + bucketName + "." + endpoint + "/" + fileName;
         } catch (IOException e) {
             e.printStackTrace();
             res = e.getMessage();

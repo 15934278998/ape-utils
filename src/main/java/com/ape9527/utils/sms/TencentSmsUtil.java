@@ -76,8 +76,8 @@ public class TencentSmsUtil {
     /**
      * 发送短信
      *
-     * @param templateId 模板ID
-     * @param params 模板参数：模板参数的个数需要与 TemplateId 对应模板的变量个数保持一致，若无模板参数，则设置为空
+     * @param templateId   模板ID
+     * @param params       模板参数：模板参数的个数需要与 TemplateId 对应模板的变量个数保持一致，若无模板参数，则设置为空
      * @param phoneNumbers 下发手机号码，采用 E.164 标准，+[国家或地区码][手机号]
      * @return SendSmsResponse
      * @throws TencentCloudSDKException TencentCloudSDKException
@@ -95,7 +95,6 @@ public class TencentSmsUtil {
 
         return smsClient.SendSms(req);
     }
-
 
 
 }
