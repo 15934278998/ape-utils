@@ -210,7 +210,7 @@
                             <goal>sign</goal>
                         </goals>
                         <configuration>
-                            <keyname>0x16758290</keyname>
+                            <keyname>0x93E1EA8B</keyname>
                         </configuration>
                     </execution>
                 </executions>
